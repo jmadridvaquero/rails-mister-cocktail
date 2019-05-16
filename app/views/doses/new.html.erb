@@ -1,0 +1,8 @@
+<%= simple_form_for [@new_dose] do |f| %>
+  <%= f.input :description %>
+
+
+  <%= f.submit "add a dose", method: :post, data: { confirm: "You sure of this?" }, class: "btn btn-primary" %>
+<% end %>
+
+

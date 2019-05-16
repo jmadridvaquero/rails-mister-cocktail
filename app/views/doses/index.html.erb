@@ -1,0 +1,11 @@
+
+<div class="container">
+	<h1 class="w-50">Doses list:</h1>
+		
+	<% @dose.each do |dose| %>
+		<div class="card w-50 border-bottom dose-card" >
+		  <h4>
+		  	<%= link_to dose.name, dose_path(dose.id) %>
+		  </h4>	
+		</div>
+	<% end %>

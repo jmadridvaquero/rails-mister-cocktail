@@ -1,0 +1,7 @@
+<h1>Name: <%=  @cocktail.name %></h1>
+<h4>cocktail description:</h4>
+<% @cocktail.ingredients.each do |ing|  %>
+	<%= ing.name %>
+<% end %>
+
+
