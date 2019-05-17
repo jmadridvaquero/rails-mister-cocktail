@@ -1,7 +1,16 @@
 <h1>Name: <%=  @cocktail.name %></h1>
 <h4>cocktail description:</h4>
-<% @cocktail.ingredients.each do |ing|  %>
-	<%= ing.name %>
-<% end %>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to "delete", dose_path(dose), method: "delete", data: { confirm: "You sure?" } %></li>
+    <% end %>
+  </ul>
 
+<%= link_to new_cocktail_dose_path(@cocktail) do %>
+		<p class="btn btn-primary">	Add an ingredient </p>
+	<% end %>
+
+<%= link_to cocktails_path do %>
+		<p class="btn btn-primary">	Back to cocktails home page </p>
+	<% end %>
 
