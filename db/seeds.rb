@@ -23,7 +23,7 @@ end
 rand_array = %w(a..z)
 puts Ingredient.all.count
 3.times do 
-	cocktail = Cocktail.new(name: Faker::ChuckNorris.fact)
+	cocktail = Cocktail.new(name: Faker::ChuckNorris.fact, photos: 'https://source.unsplash.com/weekly')
 	cocktail.save!
 	dose = Dose.create(cocktail_id: cocktail.id, description: 'tasty', ingredient_id: rand(1..Ingredient.all.count))
 	dose = Dose.create(cocktail_id: cocktail.id, description: 'tasty1', ingredient_id: rand(1..Ingredient.all.count))

@@ -1,5 +1,7 @@
 <%= simple_form_for [@cocktail] do |f| %>
   <%= f.input :name %>
+  <%= f.input :photos %>
+  <%= f.input :photos_cache, as: :hidden %>
 
   <%= f.submit "add a cocktail", method: :post, data: { confirm: "You sure of this? you won't be able to remove it later without an admin" }, class: "btn btn-primary" %>
 <% end %>
