@@ -4,9 +4,9 @@
 	</div>
 	<div class="cards">
 		<% @cocktails.each do |cocktail| %>
-			<div class="card" style="width: 20rem;" >
+			<div class="card" style="width: 25vw, height: 35vw;" >
 				<%= cl_image_tag cocktail.photos,
-      class: "card-img-top" %>
+      class: "card-img-top " %>
 			  <h5 class="card-title"></h5>	
 			  <div>
 				  <%= link_to cocktail.name, cocktail_path(cocktail) %>
